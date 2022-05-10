@@ -1,0 +1,8 @@
+ip: 'netsh interface ipv4 set address name = "Ethernet 2" static 10.48.169.17 255.255.255.0 10.48.169.1'
+dns: 'netsh interface ip set dns "Ethernet 2" static 95.167.167.95 primary'
+dns2: 'netsh interface ip add dns "Ethernet 2" 95.167.167.96 index=2'
+proxy: 'netsh winhttp set proxy 10.0.48.52 3128'
+
+ip_def: 'netsh interface ip set address "Ethernet 2" dhcp'
+dns_def: 'netsh interface ipv4 set dns name="Ethernet 2" dhcp'
+proxy_def: 'netsh winhttp reset proxy'
